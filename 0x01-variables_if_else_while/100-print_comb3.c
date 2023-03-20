@@ -10,19 +10,26 @@
 
 int main(void)
 {
-	int d;
+	int i;
+	int j;
 
-	for (d = 0; d < 100; d++)
+	for (i = 0; i < 10; i++)
 	{
-		putchar((d / 10) + '0');
-		putchar((d % 10) + '0');
-		if (d != 99)
+		for (j = 1; j < 10; j++)
 		{
-			putchar(',');
-			putchar(' ');
+			if (i < j && i != j)
+			{
+				putchar(i + '0');
+				putchar(j + '0');
+				if (i + j != 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
+
 	}
 	putchar('\n');
-
 	return (0);
 }
