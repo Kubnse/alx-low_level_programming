@@ -11,9 +11,7 @@
  */
 int main(int argc, char **argv)
 {
-	int val;
-	int result = 0;
-	int i;
+	int val, result = 0, i;
 
 	while (argc-- > 1)
 	{
