@@ -9,27 +9,24 @@
  *
  * Return: 1 if error, 0 if success
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int result;
-	int i;
-	char *p;
 	int val;
+	int result = 0;
+	int i;
 
-	result = 0;
-	if (argc > 1)
+	while (argc-- > 1)
 	{
-		for (i = 1; argv[1]; i++)
+		for (i = 0; argv[argc][i]; i++)
 		{
-			val = strtol(argv[i], &p, 10);
-			if (!*p)
-				result += val;
-			else
+			if (!(isdigit(argv[argc][i])))
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
+		val = atoi(argv[argc]);
+		result += val;
 	}
 	printf("%d\n", result);
 	return (0);
