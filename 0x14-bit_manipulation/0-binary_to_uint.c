@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * binary_to_uint - function that converts a binary number
@@ -29,3 +30,4 @@ unsigned int binary_to_uint(const char *b)
 
 	return (total);
 }
+
