@@ -2,12 +2,11 @@
 #include <stdlib.h>
 
 /**
- * read_textfile - a function that reads a text file.
+ * read_textfile - A function that reads a text file
  *
  * @filename: A pointer to the name of the file.
  *
- * @letters: The number of letters the
- *           function should read and print.
+ * @letters: letters the function should read and print.
  *
  * Return: If the function fails or filename is NULL - 0.
  *         O/w - the actual number of bytes the function can read and print.
